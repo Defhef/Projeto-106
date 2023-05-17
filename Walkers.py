@@ -8,13 +8,13 @@ while True:
     
     ret, frame = cap.read()
 
-    cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     bodies = body_cassifier.detectMultiScale(gray, 1.2,3)
     
     for (x,y,w,h) in bodies:
        cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
-
+       im show cv2.imshow('Pedestres', frame)
     if cv2.waitKey(1) == 32:
         break
 
