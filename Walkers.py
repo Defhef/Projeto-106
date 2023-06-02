@@ -14,7 +14,7 @@ while True:
     
     for (x,y,w,h) in bodies:
        cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
-       im show cv2.imshow('Pedestres', frame)
+       cv2.imshow('Pedestres', frame)
     if cv2.waitKey(1) == 32:
         break
 
